@@ -1993,6 +1993,15 @@ export class SubwayGameEngine {
     heli.searchLight.intensity = s.landed ? 6.0 : 14.0;
     const beamMat = heli.searchBeam.material as THREE.MeshBasicMaterial;
     beamMat.opacity = s.landed ? 0.04 : 0.14;
+
+    if (s.landed && !heli.collider.active) {
+      const clearOfPadCore =
+        Math.abs(this.playerPos.x - heli.anchorPos.x) > 2.3 ||
+        Math.abs(this.playerPos.z - heli.anchorPos.z) > 1.6;
+      if (clearOfPadCore) {
+        heli.collider.active = true;
+      }
+    }
   }
 
   private applyHandleShockwave(

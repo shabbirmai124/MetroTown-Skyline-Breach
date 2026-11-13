@@ -97,6 +97,7 @@ export interface HelicopterRig {
   searchLight: THREE.PointLight;
   searchBeam: THREE.Mesh;
   state: HelicopterLandingState;
+  collider: Aabb2D;
 }
 
 export interface StationBuildResult {
@@ -2397,8 +2398,9 @@ export function buildStageEnvironment(
   worldGroup.add(heliGroup);
   interactables.push(heliFuselage, canopyGlass);
 
-  // Soft collider around landed helicopter cabin core so player & enemies walk cleanly alongside open rescue doors
-  colliders.push({ id: 'rf_heli_core', minX: 6.1, maxX: 9.9, minZ: -1.15, maxZ: 1.15, active: true });
+  // Soft collider around landed helicopter cabin core (activated only once helicopter touches down)
+  const heliCollider: Aabb2D = { id: 'rf_heli_core', minX: 6.1, maxX: 9.9, minZ: -1.15, maxZ: 1.15, active: false };
+  colliders.push(heliCollider);
 
   const helicopter: HelicopterRig = {
     group: heliGroup,
@@ -2410,6 +2412,7 @@ export function buildStageEnvironment(
     searchLight,
     searchBeam,
     state: heliState,
+    collider: heliCollider,
   };
 
   // Surrounding Illuminated 360° City Skyline Towers

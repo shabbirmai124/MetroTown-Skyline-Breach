@@ -262,4 +262,18 @@ test('rooftop helicopter descends from skyline, flares nose-up, and touches down
   assert.equal(heli.pitch, 0);
 });
 
+test('moving vehicles never block or push player or zombie actors', () => {
+  const inactiveCarCollider = {
+    id: 'col_vehicle_0',
+    minX: -2.15,
+    maxX: 2.15,
+    minZ: -0.94,
+    maxZ: 0.94,
+    active: false,
+  };
+  const playerAtLane = resolveCircleAabbCollisions(0, 0, 0.45, [inactiveCarCollider]);
+  assert.deepEqual(playerAtLane, { x: 0, z: 0 });
 
+  const zombieAtLane = resolveCircleAabbCollisions(0.8, -0.2, 0.5, [inactiveCarCollider]);
+  assert.deepEqual(zombieAtLane, { x: 0.8, z: -0.2 });
+});

@@ -130,7 +130,7 @@ The Express + Vite development server listens on `http://localhost:3000`.
 Core game rules, 15-minute stage timers, wave progression, Titan interval triggers, moving train/vehicle physics, helicopter landing state progression, ADS/FOV sensitivity scaling, destructible collider resolution, and pendulum physics live in `src/game/rules.ts` with automated coverage in `src/game/rules.test.ts`:
 
 ```bash
-# Run deterministic unit tests (14/14 passing)
+# Run deterministic unit tests (15/15 passing)
 npx --yes tsx --test src/game/rules.test.ts
 
 # TypeScript type-check & production Vite bundle
@@ -140,7 +140,7 @@ npm run build
 
 ### Project Architecture
 - `src/game/rules.ts` — Pure game rules, `STAGE_DURATION_SECONDS = 900`, `WEAPON_SPECS`, `ROUND_CONFIGS`, `stepMovingTrain`, `stepMovingVehicle`, `stepHelicopterLanding`, `shouldUnlockSectorExit`, `computeStageWave`, `shouldSpawnTimedBoss`, ballistics/spread/FOV math, collision resolution, and pendulum physics.
-- `src/game/rules.test.ts` — `node:test` unit suite (`14` tests).
+- `src/game/rules.test.ts` — `node:test` unit suite (`15` tests).
 - `src/game/models.ts` — Procedural PBR textures, all 4 brightly lit architectural stage builders, moving train & realistic curved boulevard vehicle rigs, Twin-Turbine Rescue Helicopter rig on Stage 4 helipad, scary slit-pupil grinning zombie & Titan boss rigs, destructible props, and glassless open-holo weapon viewmodels.
 - `src/game/SubwayGameEngine.ts` — Three.js renderer loop, FPS controller, moving train & non-blocking traffic simulation, helicopter approach/flare/landing animation, continuous wave & Titan superpower AI, RPG/grenade physics, bullet decals, and throttled HUD snapshots.
 - `src/game/audio.ts` — Procedural Web Audio synthesizer for weapons, reloads, footsteps, pickups, material hits, and boss abilities.

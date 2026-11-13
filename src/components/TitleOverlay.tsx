@@ -29,7 +29,7 @@ export const TitleOverlay: React.FC<TitleOverlayProps> = ({
 
       {/* Top minimal station marker */}
       <div className="relative z-10 flex items-center justify-between text-xs tracking-widest uppercase text-slate-300/85 font-mono-num">
-        <span>MetroTown: Skyline Breach · 4-Sector Tactical Campaign</span>
+        <span>MetroTown: Skyline Breach · Created by Md Shabbir Mia</span>
         {bestScore > 0 && <span>Best Score · {bestScore.toLocaleString()}</span>}
       </div>
 

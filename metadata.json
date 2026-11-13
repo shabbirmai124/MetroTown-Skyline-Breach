@@ -1,0 +1,8 @@
+{
+  "name": "Metro Breach",
+  "description": "3D Subway FPS with a destructible metro train and station, swaying train handles, surface-aware bullet holes and audio, multi-part zombie hordes, and RPG rocket destruction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

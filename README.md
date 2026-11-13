@@ -8,6 +8,20 @@
 
 ---
 
+## Gameplay Video Showcase (`readme_videos/`)
+
+Watch live gameplay across **14th St. Metro** (moving subway train & Apex Overlord Titan), **Midtown Town Boulevard** (realistic curved non-blocking traffic), and **Meridian Tower Lobby** (glassless ADS combat & RPG demolition):
+
+<video src="readme_videos/metrotown-skyline-breach-gameplay.mp4" poster="readme_images/01-title-screen.png" controls width="100%">
+  <p>Your browser does not support inline MP4 playback. <a href="readme_videos/metrotown-skyline-breach-gameplay.mp4">Watch or download the gameplay video (MP4)</a>.</p>
+</video>
+
+[![Watch MetroTown: Skyline Breach Gameplay Video](readme_images/01-title-screen.png)](readme_videos/metrotown-skyline-breach-gameplay.mp4)
+
+> **[▶ Watch / Download Full Gameplay Video (`metrotown-skyline-breach-gameplay.mp4`)](readme_videos/metrotown-skyline-breach-gameplay.mp4)**
+
+---
+
 ## Visual Walkthrough & Features (`readme_images/`)
 
 ### 1. Title Screen & 4-Sector Deployment
@@ -146,6 +160,7 @@ npm run build
 - `src/game/audio.ts` — Procedural Web Audio synthesizer for weapons, reloads, footsteps, pickups, material hits, and boss abilities.
 - `src/components/` — `TitleOverlay.tsx`, `GameHud.tsx`, and `ModalOverlay.tsx`.
 - `readme_images/` — Verified gameplay & UI screenshots (`01` through `08`).
+- `readme_videos/` — Compressed, web-ready MP4 gameplay showcase (`metrotown-skyline-breach-gameplay.mp4`).
 
 ---
 

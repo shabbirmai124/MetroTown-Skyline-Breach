@@ -161,4 +161,9 @@ npm run build
 ---
 
 ## Author
-**Md Shabbir Mia**
+**Md Shabbir Mia** (`mdshabbirmia516@gmail.com`)
+
+## License
+**All Rights Reserved — Proprietary License** ([`LICENSE`](LICENSE)).  
+You **may not** use, copy, modify, distribute, or deploy any part of this codebase or its assets without the explicit prior written consent of **Md Shabbir Mia**.
+
